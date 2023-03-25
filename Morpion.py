@@ -206,8 +206,13 @@ root.config(menu=my_menu)
 
 #create options menu
 options_menu=Menu(my_menu, tearoff=False)
+play_menu=Menu(my_menu, tearoff=False)
 my_menu.add_cascade(label="Options", menu=options_menu )
 options_menu.add_command(label="Reset Game", command=reset)
+
+my_menu.add_cascade(label= "PvP or PvE", menu=play_menu)
+play_menu.add_command(label="PvP",command=reset)
+play_menu.add_command(label="PvE",command=reset)
 
 reset()
 
